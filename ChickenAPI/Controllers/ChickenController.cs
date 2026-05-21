@@ -64,11 +64,11 @@ namespace ChickenAPI.Controllers
             catch (DbUpdateConcurrencyException)
             {
                 if (!_context.Chicken.Any(e => e.ChickID == id))
-                
+
                     return NotFound();
-                
+
                 throw;
-                
+
             }
 
             return NoContent();
@@ -79,9 +79,9 @@ namespace ChickenAPI.Controllers
         {
             var chicken = await _context.Chicken.FindAsync(id);
             if (chicken == null)
-            
+
                 return NotFound();
-            
+
 
             _context.Chicken.Remove(chicken);
             await _context.SaveChangesAsync();

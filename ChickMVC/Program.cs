@@ -12,7 +12,7 @@ namespace ChickMVC
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddHttpClient();
-            
+
 
             var app = builder.Build();
 
