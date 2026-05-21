@@ -17,7 +17,7 @@ namespace ChickMVC.Controllers
         {
             try
             {
-                var response = await _httpClient.GetStringAsync("http://api-service:8080/GetMeEggs");
+                var response = await _httpClient.GetStringAsync("http://api-service:8080/api/chicken");
                 ViewBag.Chicken = response;
             }
             catch (Exception ex)
