@@ -87,7 +87,7 @@ jobs:
         echo "Posting a new chicken payload to the database..."
         curl -X POST http://localhost:8080/api/Chicken \
         -H "Content-Type: application/json" \ 
-        -d '{"name": "Cluck Norris", "age": 2, "breed": "Rhode Island Red"}' \
+        -d '{"name": "Cluck Norris", "age": 2, "breed": "Rhode Island Red", "eggproduction": 4, "ispregnant": True, "lastvetcheck": "2023-01-01"}' \
         --fail --verbose
 
     - name: Integration Step 2 - Verify Front-End MVC Data Rendering
